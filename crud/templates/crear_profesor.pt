@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Crear Profesor</title>
+        <meta charset="UTF-8">
+
+    </head>
+
+    <body>
+
+        <h1>Profesor</h1>
+
+        <form id="crearprof" method="post">
+            <table>
+                <tr>
+                    <th><label for="nombre_dep">Nombre: </label></th>
+                    <td><input type="text" id="nombre_prof" name="campo_nombre"></td>
+                </tr>
+                <tr>
+                    <th><label for="nombre_dep">Fecha Nacimiento: </label></th>
+                    <td><input type="text" id="fec_nac_prof" name="campo_nacimiento"></td>
+                </tr>
+                <tr>
+                    <th><label for="nombre_dep">Correo: </label></th>
+                    <td><input type="text" id="correo_prof" name="campo_correo"></td>
+                </tr>
+                <tr>
+                    <th><label for="nombre_dep">Teléfono: </label></th>
+                    <td><input type="text" id="tel_prof" name="campo_telefono"></td>
+                </tr>
+                <tr>
+                    <th><label for="nombre_dep">Departamento: </label></th>
+                    <td><select name="select_dep">
+                        <tal:block repeat="dep departamentos">
+                            <option value="${dep.codigo}">${dep.nombre}</option>
+                        </tal:block>
+                    </select></td>
+                </tr>
+                <tr>
+                    <th><input type="submit" name="btn_crear" value="Crear"></th>
+                    <td><input type="submit" name="btn_cancelar" value="Cancelar"></td>
+                </tr>
+            </table>
+        </form> 
+
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Actualizar Departamento</title>
+        <meta charset="UTF-8">
+
+    </head>
+
+    <body>
+
+        <h1>Departamento</h1>
+
+        <form id="modificardep" method="post">
+            <table>
+                <tr>
+                    <th><label for="nombre_dep">Código: </label></th>
+                    <td>${departamento.codigo}</td>
+                </tr>
+                <tr>
+                    <th><label for="nombre_dep">Nombre: </label></th>
+                    <td><input type="text" id="nombre_dep" name="campo_nombre" value="${departamento.nombre}"></td>
+                </tr>
+                <tr>
+                    <th><input type="submit" name="btn_actualizar" value="Actualizar"></th>
+                    <td><input type="submit" name="btn_cancelar" value="Cancelar"></td>
+                </tr>
+            </table>
+        </form> 
+
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo CRUD</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <h1>Bienvenidos</h1>
+        <h3><a href="/listar_profesores">Lista de Profesores</a> |
+            <a href="/listar_departamentos">Lista de Departamentos</a></h3>
+
+        <p>Esta es una pequeña aplicación hecha con el framework de Pyramid, la cual puede llevar a cabo operaciones básicas de CRUD sobre los datos de un grupo de profesores y departamentos.</p>
+    </body>
+</html>

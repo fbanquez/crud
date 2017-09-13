@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Eliminar Profesor</title>
+        <meta charset="UTF-8">
+
+    </head>
+
+    <body>
+
+        <h1>Profesor</h1>
+
+        <form id="borrarprof" method="post">
+            <table>
+                <tr>
+                    <th><label for="codigo_prof">Código: </label></th>
+                    <td>${profesor.codigo}</td>
+                </tr>
+                <tr>
+                    <th><label for="nombre_prof">Nombre: </label></th>
+                    <td>${profesor.nombre}</td>
+                </tr>
+                <tr>
+                    <th><label for="nacimiento_prof">Fecha Nacimiento: </label></th>
+                    <td>${profesor.fecha_nac}</td>
+                </tr>
+                <tr>
+                    <th><label for="correo_prof">Correo: </label></th>
+                    <td>${profesor.correo}</td>
+                </tr>
+                <tr>
+                    <th><label for="telefono_prof">Teléfono: </label></th>
+                    <td>${profesor.telefono}</td>
+                </tr>
+                <tr>
+                    <th><label for="departamento_prof">Departamento: </label></th>
+                    <td>${profesor.departamento}</td>
+                </tr>
+                <tr>
+                     <th><input type="submit" name="btn_borrar" value="Eliminar"></th>
+                     <td><input type="submit" name="btn_cancelar" value="Cancelar"></td>
+                </tr>
+            </table>
+        </form> 
+    </body>
+</html>

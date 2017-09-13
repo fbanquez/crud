@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Ver Departamento</title>
+        <meta charset="UTF-8">
+
+    </head>
+
+    <body>
+
+        <h1>Departamento</h1>
+
+        <form id="verdep" method="post">
+            <table>
+                <tr>
+                    <th><label for="codigo_dep">Código: </label></th>
+                    <td>${departamento.codigo}</td>
+                </tr>
+                <tr>
+                    <th><label for="nombre_dep">Nombre: </label></th>
+                    <td>${departamento.nombre}</td>
+                </tr>
+            </table>
+        </form> 
+
+        <br/>
+        <a href="${request.route_url('listar_departamentos')}">Listar Departamentos</a>
+
+    </body>
+</html>

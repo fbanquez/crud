@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Crear Departamento</title>
+        <meta charset="UTF-8">
+
+    </head>
+
+    <body>
+
+        <h1>Departamento</h1>
+
+        <form id="creardep" method="post">
+            <table>
+                <tr>
+                    <th><label for="nombre_dep">Nombre: </label></th>
+                    <td><input type="text" id="nombre_dep" name="campo_nombre"></td>
+                </tr>
+                <tr>
+                    <th><input type="submit" name="btn_crear" value="Crear"></th>
+                    <td><input type="submit" name="btn_cancelar" value="Cancelar"></td>
+                </tr>
+            </table>
+        </form> 
+
+    </body>
+</html>

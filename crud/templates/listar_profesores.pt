@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Listado de Profesores</title>
+        <meta charset="UTF-8">
+
+    </head>
+
+    <body>
+
+        <h1>Profesores</h1>
+
+        <h3>
+            <a href="/">Inicio</a> | <a href="listar_departamentos">Departamentos</a>
+        </h3>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Fecha Nacimiento</th>
+                    <th>Correo</th>
+                    <th>Teléfono</th>
+                    <th colspan="3">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr tal:repeat="profesor profesores">
+                        <td tal:content="profesor.codigo">codigo</td>
+                        <td tal:content="profesor.nombre">nombre</td>
+                        <td tal:content="profesor.fecha_nac">fecha_nac</td>
+                        <td tal:content="profesor.correo">correo</td>
+                        <td tal:content="profesor.telefono">telefono</td>
+
+                        <td><a href="/ver_profesor/${profesor.codigo}">Ver</a></td>
+                        <td><a href="/actualizar_profesor/${profesor.codigo}">Actualizar</a></td>
+                        <td><a href="/eliminar_profesor/${profesor.codigo}">Eliminar</a></td>
+                    </tr>
+            </tbody>
+        </table>
+        
+        <br/>
+        <a href="/crear_profesor">Crear profesor</a>
+
+    </body>
+</html>

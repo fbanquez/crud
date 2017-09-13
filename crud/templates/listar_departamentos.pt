@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Listado de Departamentos</title>
+        <meta charset="UTF-8">
+
+    </head>
+
+    <body>
+
+        <h1>Departamentos</h1>
+
+        <h3>
+            <a href="/">Inicio</a> | <a href="listar_profesores">Profesores</a>
+        </h3>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th colspan="3">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr tal:repeat="departamento departamentos">
+                        <td tal:content="departamento.codigo">codigo</td>
+                        <td tal:content="departamento.nombre">nombre</td>
+
+                        <td><a href="/ver_departamento/${departamento.codigo}">Ver</a></td>
+                        <td><a href="/actualizar_departamento/${departamento.codigo}">Actualizar</a></td>
+                        <td><a href="/eliminar_departamento/${departamento.codigo}">Eliminar</a></td>
+                    </tr>
+            </tbody>
+        </table>
+        
+        <br/>
+        <a href="${request.route_url('crear_departamento')}">Crear departamento</a>
+
+    </body>
+</html>

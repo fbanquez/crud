@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Actualizar Profesor</title>
+        <meta charset="UTF-8">
+
+    </head>
+
+    <body>
+
+        <h1>Profesor</h1>
+
+        <form id="modificarprof" method="post">
+            <table>
+                <tr>
+                    <th><label for="codigo_prof">Código: </label></th>
+                    <td>${profesor.codigo}</td>
+                </tr>
+                <tr>
+                    <th><label for="nombre_prof">Nombre: </label></th>
+                    <td><input type="text" id="nombre_prof" name="campo_nombre" value="${profesor.nombre}"></td>
+                </tr>
+                <tr>
+                    <th><label for="fec_nac_prof">Fecha Nacimiento: </label></th>
+                    <td><input type="text" id="fec_nac_prof" name="campo_nacimiento" value="${profesor.fecha_nac}"></td>
+                </tr>
+                <tr>
+                    <th><label for="correo_prof">Correo: </label></th>
+                    <td><input type="text" id="correo_prof" name="campo_correo" value="${profesor.correo}"></td>
+                </tr>
+                <tr>
+                    <th><label for="tel_prof">Teléfono: </label></th>
+                    <td><input type="text" id="tel_prof" name="campo_telefono" value="${profesor.telefono}"></td>
+                </tr>
+                <tr>
+                    <th><label for="nombre_dep">Departamento: </label></th>
+                    <td><select name="select_dep">
+                        <tal:block repeat="dep departamentos">
+                            <option value="${dep.codigo}">${dep.nombre}</option>
+                        </tal:block>
+                    </select></td>
+                </tr>
+                <tr>
+                    <th><input type="submit" name="btn_actualizar" value="Actualizar"></th>
+                    <td><input type="submit" name="btn_cancelar" value="Cancelar"></td>
+                </tr>
+            </table>
+        </form> 
+
+    </body>
+</html>
